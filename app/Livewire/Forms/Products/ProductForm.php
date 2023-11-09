@@ -9,12 +9,12 @@ use Livewire\Form;
 
 class ProductForm extends Form
 {
-    protected Product $product;
+    public ?Product $product;
 
     #[Rule(['required'])]
     public ?string $name;
 
-    #[Rule(['nullable', 'min:20'])]
+    #[Rule(['nullable', 'min:10'])]
     public ?string  $description;
 
     #[Rule(['required'])]

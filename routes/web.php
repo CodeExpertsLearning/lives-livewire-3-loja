@@ -17,6 +17,7 @@ Route::view('/', 'welcome');
 
 
 Route::prefix('manager')
+    ->middleware('auth')
     ->name('manager.')
     ->namespace('App\Livewire\Manager')
     ->group(function () {

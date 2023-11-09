@@ -21,6 +21,16 @@ return new class extends Migration
             $table->string('photo');
             $table->boolean('is_thumb')->default(false);
 
+            /**
+             * is_thumb seria a foto destaque da home pro produto,
+             * posso marcar uma thumb / havendo outra thumb marcada,
+             * se eu atualizar pra uma nova thumb eu devo desmarcar a atual
+             *
+             * outro caminho pra thumb:
+             * subquerie para pegar uma foto na listagem de todos os produtos
+             * da home...
+             */
+
             $table->timestamps();
         });
     }
